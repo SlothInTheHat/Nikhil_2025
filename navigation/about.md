@@ -4,4 +4,5 @@ title: About
 permalink: /about/
 ---
 
-Creator of Student 2025
+# About this page
+This Website will have all the things I make and do in CSA this trimester and possibly even later. 
