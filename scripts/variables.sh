@@ -39,5 +39,6 @@ echo "NOW SETTING UP VIRTUAL ENVIORMENT"
 #activate virtual enviorment script
 source venv/bin/activate
 echo ""
-
 echo "YAY VIRTUAL ENVIORMENT SET UP"
+echo ""
+jupyter kernelspec list
