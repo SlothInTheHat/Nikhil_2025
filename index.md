@@ -1,40 +1,136 @@
 ---
 layout: base
-title: Nikhil's page of funtimes and code :) 
+title: Nikhil's page of funtimes 
 description: My fun lil website
 hide: true
 ---
-
-CODE! CODE! CODE!
-
 
 
 ![sloth](https://www.rainforest-alliance.org/wp-content/uploads/2021/06/three-toed-sloth-teaser-1-400x400.jpg.webp)
 sloth
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Round Number Input</title>
-    <script>
-        function roundNumber() {
-            // Get the value from the input field
-            let numInput = document.getElementById('numberInput').value;
-            // Parse the number and round it
-            let roundedNum = Math.round(parseFloat(numInput));
-            // Display the rounded number in the result span
-            document.getElementById('result').textContent = 'Rounded Number: ' + roundedNum;
+    <title>Flying Text with User Input</title>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+            height: 200vh; /* Ensure there is enough space to scroll */
+            background-color: #282c34; /* Dark background for white text contrast */
+            color: white;
+            overflow-x: hidden; /* Hide horizontal overflow */
+            font-family: Arial, sans-serif;
         }
-    </script>
+
+        .input-container {
+            position: static;
+            bottom: 10px;
+            left: 10px;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .flying-text {
+            position: fixed; 
+            white-space: nowrap;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            left: -100%; /* Start off-screen */
+            animation: flyAcross 10s linear;
+        }
+
+        /* Keyframes for flying text animation */
+        @keyframes flyAcross {
+            from {
+                left: -100%;
+            }
+            to {
+                left: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Round a Number</h1>
-    <form onsubmit="event.preventDefault(); roundNumber();">
-        <label for="numberInput">Enter a number:</label>
-        <input type="number" id="numberInput" step="any">
-        <button type="submit">Round Number</button>
-    </form>
-    <p id="result"></p>
+    <div class="input-container">
+        <input type="text" id="userInput" placeholder="Enter motivational quote">
+        <button onclick="handleSubmit()">Submit</button>
+    </div>
+
+    <script>
+        // Array to hold sentences
+        var sentences = [
+            "CODE CODE CODE",
+            "BACK TO WORK!",
+            "WORK TALK!",
+            "LOCK IN!",
+            "BE BETTER!",
+            "BIG BROTHER IS WATCHING"
+        ];
+
+        function handleSubmit() {
+            const inputElement = document.getElementById('userInput');
+            const userInput = inputElement.value.trim();
+
+            if (userInput) {
+                // Add the input text to the sentences array
+                sentences.push(userInput);
+                // Create flying text animation for the new sentence
+                createFlyingText(userInput);
+                inputElement.value = ''; // Clear input field
+            } else {
+                alert('No text entered!');
+            }
+        }
+
+        function getRandomSentence() {
+            return sentences[Math.floor(Math.random() * sentences.length)];
+        }
+
+        function getRandomVerticalPosition() {
+            const min = 10; // Minimum distance from the top in pixels
+            const max = window.innerHeight - 50; // Maximum distance from the top in pixels
+            return Math.random() * (max - min) + min; // Random value between min and max
+        }
+
+        function createFlyingText(text) {
+            const textElement = document.createElement('div');
+            textElement.className = 'flying-text';
+            textElement.textContent = text;
+            textElement.style.top = `${getRandomVerticalPosition()}px`;
+            document.body.appendChild(textElement);
+
+            // Remove element after animation ends
+            textElement.addEventListener('animationend', () => {
+                textElement.remove();
+            });
+        }
+
+        function startSpawningTexts() {
+            // Spawn new text every 3-6 seconds
+            setInterval(() => {
+                createFlyingText(getRandomSentence());
+            }, Math.random() * 3000 + 3000);
+        }
+
+        // Start spawning texts
+        startSpawningTexts();
+    </script>
 </body>
 </html>
