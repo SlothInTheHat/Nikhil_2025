@@ -7,9 +7,7 @@ hide: true
 
 
 ![sloth](https://www.rainforest-alliance.org/wp-content/uploads/2021/06/three-toed-sloth-teaser-1-400x400.jpg.webp)
-sloth
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -82,6 +80,7 @@ sloth
             "LOCK IN!",
             "BE BETTER!",
             "BIG BROTHER IS WATCHING"
+            "SEED += 1"
         ];
 
         function handleSubmit() {
