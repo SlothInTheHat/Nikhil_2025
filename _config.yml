@@ -5,18 +5,19 @@ github_username: SlothInTheHat
 github_repo: "Nikhil_2025" 
 baseurl: "/Nikhil_2025"
 future: true
-#remote_theme: jekyll/minima
+remote_theme: jekyll/minima
 minima:
   skin: dark
   social_links:
     - { platform: github, user_url: "https://github.com/Nikhil_2025"}
     - { platform: x, user_url: "https://x.com/NighthawkCoding/" }
     - { platform: youtube, user_url: "https://www.youtube.com/@slothinahat" } 
-# remote_theme: pages-themes/midnight@v0.2.0
-remote_theme: pages-themes/cayman@v0.2.0
+#remote_theme: pages-themes/midnight@v0.2.0
+#remote_theme: pages-themes/cayman@v0.2.0
 #remote_theme: pages-themes/dinky@v0.2.0
 #remote_theme: pages-themes/minimal@v0.2.0
 #remote_theme: pages-themes/time-machine@v0.2.0
+#remote_theme: pages-themes/modernist@v0.2.0
 plugins:
   - jekyll-remote-theme
 header_pages:
