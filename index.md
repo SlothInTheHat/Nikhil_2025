@@ -79,7 +79,7 @@ hide: true
             "WORK TALK!",
             "LOCK IN!",
             "BE BETTER!",
-            "BIG BROTHER IS WATCHING"
+            "BIG BROTHER IS WATCHING",
             "SEED += 1"
         ];
 
