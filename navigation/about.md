@@ -1,10 +1,138 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-# About Me
+<br/><br/>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .grid-item {
+        text-align: center;
+    }
+    .grid-item img {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+    }
+    .grid-item p {
+        margin: 5px 0;
+    }
+
+    .image-gallery-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 200px; /* Adjust based on your needs */
+    }
+
+    .image-gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        animation: scroll 20s linear infinite;
+        will-change: transform;
+    }
+
+    .image-gallery img {
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+
+<!-- HTML Structure -->
+<div class="grid-container" id="grid_container"></div>
+
+<div class="image-gallery-container">
+    <div class="image-gallery" id="image_gallery">
+        <!-- Images will be added here by JavaScript -->
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // References to the HTML containers
+        var container = document.getElementById("grid_container");
+        var gallery = document.getElementById("image_gallery");
+
+        // Data for images
+        var living_in_the_world = [
+            {"flag": "../assets/images/CR.JPG", "greeting": "Monkey", "description": "Costa Rica"},
+            {"flag": "../assets/images/CA.jpg", "greeting": "Dunes", "description": "Yuma Desert"},
+            {"flag": "../assets/images/HA.jpg", "greeting": "Seal", "description": "Hawaii"},
+            {"flag": "../assets/images/YS.jpg", "greeting": "Bison", "description": "Yellowstone"},
+            {"flag": "../assets/images/CR2.jpg", "greeting": "Bison", "description": "Yellowstone"},
+            {"flag": "../assets/images/NV.jpg", "greeting": "Bison", "description": "Yellowstone"},
+            {"flag": "../assets/images/CC.JPG", "greeting": "Bison", "description": "Yellowstone"},
+            {"flag": "../assets/images/PS.jpg", "greeting": "Bison", "description": "Yellowstone"},
+        ];
+
+        // Function to populate the grid and gallery
+        function populateGallery() {
+            // Loop through data to create grid and gallery items
+            living_in_the_world.forEach(location => {
+                // Grid item
+                var gridItem = document.createElement("div");
+                gridItem.className = "grid-item";
+
+                var img = document.createElement("img");
+                img.src = location.flag;
+                img.alt = location.description + " Flag";
+
+                var description = document.createElement("p");
+                description.textContent = location.description;
+
+                var greeting = document.createElement("p");
+                greeting.textContent = location.greeting;
+
+                // gridItem.appendChild(img);
+                // gridItem.appendChild(description);
+                // gridItem.appendChild(greeting);
+
+                // container.appendChild(gridItem);
+
+                // Gallery item
+                var galleryImg = document.createElement("img");
+                galleryImg.src = location.flag;
+                galleryImg.alt = location.description + " Flag";
+
+                gallery.appendChild(galleryImg);
+            });
+
+            // Duplicate gallery images for seamless scroll
+            duplicateGalleryImages();
+        }
+
+        // Function to duplicate gallery images
+        function duplicateGalleryImages() {
+            const items = gallery.children;
+            const totalItems = items.length;
+            for (let i = 0; i < totalItems; i++) {
+                let clone = items[i].cloneNode(true);
+                gallery.appendChild(clone);
+            }
+        }
+
+        // Call the function to populate gallery
+        populateGallery();
+    });
+</script>
+
 ## Nikhil Lalwani
 Senior at Del Norte High School
 Interested in: 
@@ -17,89 +145,3 @@ Interested in:
 I enjoy biking and swimming and I have an aquarium at home. 
 
 This Website will have all the things I make and do in CSA this trimester and possibly even later. 
-
-
-
-<style>
-    /* Style looks pretty compact, 
-       - grid-container and grid-item are referenced the code 
-    */
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
-        gap: 10px;
-    }
-    .grid-item {
-        text-align: center;
-    }
-    .grid-item img {
-        width: 100%;
-        height: 100px; /* Fixed height for uniformity */
-        object-fit: contain; /* Ensure the image fits within the fixed height */
-    }
-    .grid-item p {
-        margin: 5px 0; /* Add some margin for spacing */
-    }
-
-    .image-gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        }
-
-    .image-gallery img {
-        max-height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-</style>
-
-<!-- This grid_container class is used by CSS styling and the id is used by JavaScript connection -->
-<div class="grid-container" id="grid_container">
-    <!-- content will be added here by JavaScript -->
-</div>
-
-<script>
-    // 1. Make a connection to the HTML container defined in the HTML div
-    var container = document.getElementById("grid_container"); // This container connects to the HTML div
-
-    // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
-    var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
-    var living_in_the_world = [
-        {"flag": "../assets/images/CR.JPG", "greeting": "Monkey", "description": "Costa Rica"},
-        {"flag": "../assets/images/CA.jpg", "greeting": "Dunes", "description": "Yuma Desert"},
-        {"flag": "../assets/images/HA.jpg", "greeting": "Seal", "description": "Hawaii"},
-        {"flag": "../assets/images/YS.jpg", "greeting": "Bison", "description": "Yellowstone"},
-    ];
-
-    // 3a. Consider how to update style count for size of container
-    // The grid-template-columns has been defined as dynamic with auto-fill and minmax
-
-    // 3b. Build grid items inside of our container for each row of data
-    for (const location of living_in_the_world) {
-        // Create a "div" with "class grid-item" for each row
-        var gridItem = document.createElement("div");
-        gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
-        // Add "img" HTML tag for the flag
-        var img = document.createElement("img");
-        img.src = location.flag; // concatenate the source and flag
-        img.alt = location.flag + " Flag"; // add alt text for accessibility
-
-        // Add "p" HTML tag for the description
-        var description = document.createElement("p");
-        description.textContent = location.description; // extract the description
-
-        // Add "p" HTML tag for the greeting
-        var greeting = document.createElement("p");
-        greeting.textContent = location.greeting;  // extract the greeting
-
-        // Append img and p HTML tags to the grid item DIV
-        gridItem.appendChild(img);
-        gridItem.appendChild(description);
-        gridItem.appendChild(greeting);
-
-        // Append the grid item DIV to the container DIV
-        container.appendChild(gridItem);
-    }
-</script>
