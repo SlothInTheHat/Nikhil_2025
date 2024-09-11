@@ -32,3 +32,10 @@ Made a program to fly text across the screen with motivational quotes. I added a
  
 ## Notes
 - use java 17
+
+## Week 4
+
+### Animated images on about page
+
+### Car game
+still needs improvement ie textures and stuff

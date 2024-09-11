@@ -18,6 +18,12 @@ permalink: /brainstorm/
 ### Driving Game TODO:
 
 In Progress: get car controller working on a page
+- make it smoother
+- slow it down
+- add breaking
+- audio maybe?
+
+Next: add images for the car and the coins
 
 
 ## Python Hacks Ideas
@@ -26,7 +32,5 @@ In Progress: get car controller working on a page
 - **get website markdown without having to provide http url**
 - python mean function
 - wikepedia, ask input for article
-
-
 
 
