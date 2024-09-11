@@ -46,8 +46,8 @@ permalink: /game/
             let angleDegrees = 0; // Rotation angle in degrees
 
             let velocity = 0;
-            const acceleration = 0.1; // Acceleration per frame
-            const maxSpeed = 10; // Maximum speed
+            const acceleration = 0.2; // Acceleration per frame
+            const maxSpeed = 8; // Maximum speed
             const deceleration = 0.1; // Deceleration per frame
 
             let keysPressed = {};
@@ -143,11 +143,12 @@ permalink: /game/
 
             function update() {
                 // Handle movement based on angle and key presses
-                if (keysPressed['w']) {
+                if (keysPressed[' '] || keysPressed['w']) {
                     velocity = Math.min(velocity + acceleration, maxSpeed);
                 } else if (keysPressed['s']) {
                     velocity = Math.max(velocity - acceleration, -maxSpeed); // Allow negative velocity for backward movement
-                } else {
+                } 
+                else {
                     // Apply deceleration when no key is pressed
                     if (velocity > 0) {
                         velocity = Math.max(velocity - deceleration, 0);
