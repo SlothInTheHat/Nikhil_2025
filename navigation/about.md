@@ -141,7 +141,21 @@ Interested in:
 - GIS (Geographical Information Systems)
 
 
-
 I enjoy biking and swimming and I have an aquarium at home. 
+- DNHS Swim Team
+- [Ride Across California](https://www.rideacrosscalifornia.com/) Youth Support for 3 years
+- 22 gallon Planted aquarium at home
 
-This Website will have all the things I make and do in CSA this trimester and possibly even later. 
+This Website will have all the things I make and do in CSA this trimester and possibly even later.
+
+## Resume
+- Eagle Scout
+- [MIT Beaver Works](https://beaverworks.ll.mit.edu/CMS/bw/bwsi) Program for disaster Response
+- Story Map for [Vexcel](https://www.vexcel-imaging.com/) showcased at national Esri User Conference
+- National Youth Leadership Training
+- National Merit Scholarship Semifinalist
+- Debate
+- Illumina Genomic Discovery Program
+- UCLA LACC program
+- Languages
+    - Hindi, Spanish, English

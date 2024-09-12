@@ -39,3 +39,7 @@ Made a program to fly text across the screen with motivational quotes. I added a
 
 ### Car game
 still needs improvement ie textures and stuff
+
+
+### Cookie Clicker Pair Project
+added an upgrade button
