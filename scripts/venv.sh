@@ -13,5 +13,5 @@ fi
 source venv/bin/activate
 
 # Install the required Python packages
-pip install -r /home/nikhil/nighthawk_fix/Nikhil_2025/requirements.txt
+pip install -r /home/nikhil/nighthawk/Nikhil_2025/requirements.txt
 bundle install
