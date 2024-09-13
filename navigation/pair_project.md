@@ -18,7 +18,7 @@ permalink: /pair_project/
             font-size: 2rem;
             padding: 10px 20px;
             cursor: pointer;
-            background-color: #F8C291;
+            background-color: #073d6e;
             border: none;
             border-radius: 5px;
         }
@@ -32,7 +32,6 @@ permalink: /pair_project/
 </head>
 <body>
     <div class="cookie-clicker-container">
-        <h1>Cookie Clicker</h1>
         <button id="cookieButton"> 🍪 Click me!</button>
         <button id="upgradeButton"> 2x upgrade</button>
         <p>Cookies: <span id="cookieCount">0</span></p>
@@ -56,7 +55,7 @@ permalink: /pair_project/
                     cookieCount -= upgradePrice;
                     cookieCountDisplay.textContent = cookieCount;
                     multiplier = multiplier * 2;
-                    upgradePrice  = upgradePrice*(multiplier**2);
+                    upgradePrice  = upgradePrice*(2**multiplier);
                     upgradeButton.textContent = "2x Price:" + upgradePrice
                 }
                 else{

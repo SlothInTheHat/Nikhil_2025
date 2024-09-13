@@ -35,9 +35,9 @@ permalink: /game/
 
             const rectWidth = 50;
             const rectHeight = 30;
-            const rectColor = '#e67e22'; // Orange color
-            const canvasBackgroundColor = '#ffffff'; // Canvas background color
-            const circleColor = '#ffff00'; // Yellow color
+            const rectColor = '#116ee4'; // Orange color
+            const canvasBackgroundColor = '#e2b8a7'; // Canvas background color
+            const circleColor = '#0f1cc1'; // Yellow color
             const circleRadius = 20; // Radius of the circles
             const circleLifetime = 4000; // Circle lifetime in milliseconds (4 seconds)
 

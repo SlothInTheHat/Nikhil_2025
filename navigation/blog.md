@@ -3,6 +3,7 @@ layout: blogs
 title: Blogs
 search_exclude: true
 permalink: /blogs/
+comments: true
 ---
 
 # What I've done so far
@@ -43,3 +44,13 @@ still needs improvement ie textures and stuff
 
 ### Cookie Clicker Pair Project
 added an upgrade button
+
+
+<script src="https://utteranc.es/client.js"
+        repo="SlothInTheHat/Nikhil_2025"
+        issue-term="pathname"
+        label="comments"
+        theme="icy-dark"
+        crossorigin="anonymous"
+        async>
+</script>
