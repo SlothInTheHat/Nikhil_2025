@@ -199,6 +199,8 @@ Remember to use `@Override` keyword when overriding methods
 
 
 ## Memory From Presentation
+![image](../assets/images/mort.png)
+
 
   My attempt at an analogy between Mr. Mortensen and Inheritence did not go as planned and everyone in the class started laughing. 
   I think it did end up being a good refresher in the middle of the lesson to keep it more light hearted. 
