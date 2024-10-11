@@ -108,11 +108,25 @@ hide: true
             return Math.random() * (max - min) + min; // Random value between min and max
         }
 
+        
+        
+        function getRandomColor() {
+
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        }
+
+        
         function createFlyingText(text) {
             const textElement = document.createElement('div');
             textElement.className = 'flying-text';
             textElement.textContent = text;
             textElement.style.top = `${getRandomVerticalPosition()}px`;
+            textElement.style.color = getRandomColor();
             document.body.appendChild(textElement);
 
             // Remove element after animation ends

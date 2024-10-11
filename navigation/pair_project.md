@@ -34,6 +34,7 @@ permalink: /pair_project/
     <div class="cookie-clicker-container">
         <button id="cookieButton"> 🍪 Click me!</button>
         <button id="upgradeButton"> 2x upgrade</button>
+        <button id="upgrade2"> cps</button>
         <p>Cookies: <span id="cookieCount">0</span></p>
     </div>
     <script>
@@ -41,14 +42,29 @@ permalink: /pair_project/
             let cookieCount = 0;
             let multiplier  = 1;
             let upgradePrice = 20;
+            let upgrade2Price = 10;
+            let cps = 0;
             const cookieButton = document.getElementById('cookieButton');
             const upgradeButton = document.getElementById('upgradeButton');
+            const upgrade2 = document.getElementById('upgrade2');
             const cookieCountDisplay = document.getElementById('cookieCount');
             upgradeButton.textContent = "2x Price:" + upgradePrice
+            
+            
+            <!-- function cps_cookie() {
+            cookieCount += cps;
+            console.log(count); // Log the current value of count
+            }
+            setInterval(incrementCount, 1000);
+             -->
+            
+            
+            
             cookieButton.addEventListener('click', () => {
                 cookieCount += multiplier;
                 cookieCountDisplay.textContent = cookieCount;
                 upgradeButton.textContent = "2x Price:" + upgradePrice
+                upgrade2.textContent =  cps + " cps costs " + upgrade2Price
             });
             upgradeButton.addEventListener('click', () => {
                 if (cookieCount > upgradePrice){
@@ -61,6 +77,19 @@ permalink: /pair_project/
                 else{
                     alert("Not Enough 🍪 for upgrade")
                 }
+            upgrade2.addEventListener('click', () => {
+                if (cookieCount > upgrade2Price){
+                    cookieCount -= upgrade2Price;
+                    cookieCountDisplay.textContent = cookieCount;
+                    // multiplier = multiplier * 2;
+                    upgrade2Price  = upgradePrice*(2**multiplier);
+                    upgrade2.textContent =  cps + " cps costs " + upgrade2Price
+                }
+                else{
+                    alert("Not Enough 🍪 for upgrade")
+                }
+
+                
             });
         });
     </script>
