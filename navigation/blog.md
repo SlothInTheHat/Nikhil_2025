@@ -340,6 +340,26 @@ Chess
 ```
 
 
+# Sprint 3 - Fullstack project
+
+As a part of the Spring 2025 project my team is working on creating/improving the student database, specifically access through java and spring api. 
+
+- We need to make it possible to create accounts for students on the site and add them to the database.
+
+
+One of the first things I worked on was seperating the **login** and **sign up** pages. 
+- Dylan and I implemented a **confirm password** feature on the sign up page front end
+    - this along with the show password feature that Dylan worked on makes creating an account much more streamlined and secure
+- As a Quality of life feature I included documentation of Spring, JPA, and Restful API on the home page, which we could reference while working on the project. 
+
+While working on the sign up page I found a bug that would cause an internal server error when creating an account with an already existing email.
+![image](../assets/images/error.png)
+
+To fix this, I looked into the SpringAPI and found that I could use an [Exists Query](https://www.baeldung.com/spring-data-exists-query). 
+
+By creating a new `existsByEmail` method, I could check if the provided email existed in the data base before attempting to create a new account. Because I could stop the server error from occuring and warn the user that the provided email was already in use. 
+
+![image](../assets/images/login.png)
 
 
 
