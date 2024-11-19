@@ -368,11 +368,13 @@ By creating a new `existsByEmail` method, I could check if the provided email ex
 
 ## Corrections:
 
+![image](../assets/images/analytics.png)
+
 Quesiton 4: In Java dividing 2 integers uses integer devision so 7/3 would be the integer 2 rather than 2.333
 
 Question 9: since the loop starts from 1 and goes to array.length we need to subtract one when keying in order to avoid an out of bounds error. 
 
-Question 14: since the code is already looping through each instance of that class, we just need to ge the milage for that specific vehicle and sum them
+Question 14: since the code is already looping through each instance of that class, we just need to get the milage for that specific vehicle and sum them
 
 Question 15: Looping through the array and using array.length as a key will result in out of bounds error at the end
 
@@ -403,7 +405,6 @@ Person View Controller
 ![image](../assets/images/FeatureCode.png)
 create.html
 ![image](../assets/images/htmlfeature.png)
-
 
 
 
