@@ -362,6 +362,44 @@ By creating a new `existsByEmail` method, I could check if the provided email ex
 ![image](../assets/images/login.png)
 
 
+# CollegeBoard Multiple Choice
+
+## Score: 27/40
+
+## Corrections:
+
+Quesiton 4: In Java dividing 2 integers uses integer devision so 7/3 would be the integer 2 rather than 2.333
+
+Question 9: since the loop starts from 1 and goes to array.length we need to subtract one when keying in order to avoid an out of bounds error. 
+
+Question 14: since the code is already looping through each instance of that class, we just need to ge the milage for that specific vehicle and sum them
+
+Question 15: Looping through the array and using array.length as a key will result in out of bounds error at the end
+
+Question 16: the first loop already ends at a1.length so there is no reason the subtract one. This would shif the result down by 1. 
+
+Question 18: no need to subtract 1 `(int) ( Math.random () * myList.size () )` already produces random indexes in the array
+
+Question 22: When an array is instanciated with a type, elements, even if thye are a child class are still treated as if they were the type of the decleration, so `books[0]` would just be a book and could thus not use methods from the audiobook class.
+
+Question 23: I only looked at the first increment and didn't take into account the rest. 
+
+Question 24: This 2d array is column major so element at [0][2] is actually 0th element in row 2.
+
+Question 29: included the first k when the loop should have started at 4.
+
+Question 31: messed up 3rd itteration
+
+Question 34: private variables for the class can't be accessed outside so choice III does not work
+
+Question 36: can't have more than 1 even even test cause
+
+
+
+
+
+
+
 
 <script src="https://utteranc.es/client.js"
         repo="SlothInTheHat/Nikhil_2025"
