@@ -407,6 +407,19 @@ create.html
 ![image](../assets/images/htmlfeature.png)
 
 
+# Study Plan
+
+1. To do better on the AP test, I will make sure that I go through each iteration when dealing with loop problems. 
+2. I will need to be more careful with types
+3. I plan on paying careful attention to the code as I write it so that I don't have to try and remember if substrings are inclusive etc...
+4. On the next College board MC, I will  try and learn from these mistakes on this MC.
+
+# Things to review:
+
+- recursion
+- itteration
+- boolean expressions, specifically deMorgans law.
+
 
 
 <script src="https://utteranc.es/client.js"
