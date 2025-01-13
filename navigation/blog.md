@@ -67,8 +67,6 @@ MazeSolver.main(null);
 ```
 
 
-
-
 # What I've done so far
 
 ## Week 1
