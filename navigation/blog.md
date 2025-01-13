@@ -10,6 +10,53 @@ comments: true
 ![image](../assets/images/showersquad.jpg)
 ## Matthew, Arthur and I being showers at the panel and sitting in the front 😎
 
+# methods HW
+
+## Maze Solver:
+
+public class MazeSolver {
+
+    public static boolean solveMaze(char[][] maze, int startX, int startY) {
+        if (maze[startX][startY] == '#' || maze[startX][startY] == 'x') {
+            return false;
+        }
+
+        if (maze[startX][startY] == 'E') {
+            return true;
+        }
+
+        // Mark the current cell as visited
+        maze[startX][startY] = 'x';
+
+        // try every direction
+        boolean foundExit = solveMaze(maze, startX - 1, startY) || // up
+                            solveMaze(maze, startX + 1, startY) || // down
+                            solveMaze(maze, startX, startY - 1) || // left
+                            solveMaze(maze, startX, startY + 1);   // right
+
+        //reset
+        maze[startX][startY] = ' ';
+
+        return foundExit;
+    }
+
+    public static void main(String[] args) {
+        char[][] maze = {
+            {'#', '#', '#', '#', '#'},
+            {'#', ' ', ' ', '#', 'E'},
+            {'#', ' ', '#', ' ', '#'},
+            {'#', ' ', ' ', ' ', '#'},
+            {'#', '#', '#', '#', '#'}
+        };
+
+        System.out.println(solveMaze(maze, 1, 4));
+    }
+}
+
+
+MazeSolver.main(null);
+
+
 ## Notes
 
 It's equally important to learn to explain your code at a surface level as it is to write good code.
