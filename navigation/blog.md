@@ -9,11 +9,20 @@ comments: true
 # The Panel
 ![image](../assets/images/showersquad.jpg)
 ## Matthew, Arthur and I being showers at the panel and sitting in the front 😎
+## Notes
+
+- It's equally important to learn to explain your code at a surface level as it is to write good code.
+- Elevator pitch is a must
+- Agile methodology and communication of work makes you very valuable to clubs
+- get good at GitHub for projects
+- project focused applications
+- GET SENIOR FRIENDS FOR JOB REFERENCES
+
 
 # methods HW
 
 ## Maze Solver:
-
+```
 public class MazeSolver {
 
     public static boolean solveMaze(char[][] maze, int startX, int startY) {
@@ -55,21 +64,8 @@ public class MazeSolver {
 
 
 MazeSolver.main(null);
+```
 
-
-## Notes
-
-It's equally important to learn to explain your code at a surface level as it is to write good code.
-
-Elevator pitch is a must
-
-Agile methodology and communication of work makes you very valuable to clubs
-
-get good at GitHub for projects
-
-project focused applications
-
-GET SENIOR FRIENDS FOR JOB REFERENCES
 
 
 
