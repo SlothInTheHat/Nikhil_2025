@@ -6,7 +6,31 @@ permalink: /blogs/
 comments: true
 ---
 
-# The Panel
+# Cyber Security Panel
+
+![image](../assets/images/cyber.jpg)
+
+## Notes: 
+
+One of the biggest things to remember if considering a career in cybersecurity is to stay curious and not be afraid to try something off a hunch.
+
+To be truly successful in the workforce you need to build a network of the best in their field
+	- jobs
+	- recommendation
+
+It is important to have a technical background in IT to understand the systems that you are trying to defend.
+
+0 day attacks target a vulnerability that cant be patched quickly
+
+You need to be equally good with your people skills especially when talking to employers who wont understand specific technical Jargon.
+	- looks for positions like scrum master and product manager to build these skills and the ability to present work to employers
+
+**Certifications**: Look for CC (Certified Cybersecurity) certification
+
+Cyber attacks especially ransom target Microsoft because of how prevalent it is in healthcare where people don't have time to try and solve due to lives being on the line. 
+
+
+# The Alumni Panel
 ![image](../assets/images/showersquad.jpg)
 ## Matthew, Arthur and I being showers at the panel and sitting in the front 😎
 ## Notes
