@@ -11,6 +11,7 @@ comments: true
 ![image](../assets/images/cyber.jpg)
 
 ## Notes: 
+Made my linkden
 
 One of the biggest things to remember if considering a career in cybersecurity is to stay curious and not be afraid to try something off a hunch.
 
