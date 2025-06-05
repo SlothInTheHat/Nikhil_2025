@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Nikhil's page of funtimes 
+title: Nikhil's page
 description: My fun lil website
 hide: true
 ---

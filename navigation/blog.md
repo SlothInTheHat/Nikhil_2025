@@ -6,12 +6,47 @@ permalink: /blogs/
 comments: true
 ---
 
+
+# Senior Review
+
+In APCSA this year, I didn't just learn how to code, but also how to collaborate in a work enviorment. This class was a very different experience than any class I have taken in the past.
+
+
+## Leadership:
+
+### Login Product Manager Trimester 2
+- pre and post N@tm team meetings to discuss areas of growth
+- planned future features for login:
+(team planning)[https://github.com/SlothInTheHat/Nikhil_2025/issues/7]
+
+
+# OpenCS Contributions:
+
+![image](../assets/images/styling.png)
+(Toolkit styling to match OpenCS theme.)[https://pages.opencodingsociety.com/student/submissions]
+
+![](../assets/images/profilediagram.png)
+Figuring out how to unify the two existing profile pages into one.
+
+## Certificates:
+
+- Fundamentals of Java
+- Fundamentals of html
+- Fundamentals of UI Design 
+- Fundamentals of Tailwind
+
+## NFTs
+
+- Public speaking and stage presence
+- Product Manager
+- Networking (worked with pretty much every team)
+![](../assets/images/natm.png)
+
+
 # Cyber Security Panel
 
 ![image](../assets/images/cyber.jpg)
 
-## Notes: 
-Made my linkden
 
 One of the biggest things to remember if considering a career in cybersecurity is to stay curious and not be afraid to try something off a hunch.
 
